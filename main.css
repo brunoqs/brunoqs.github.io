@@ -1,5 +1,7 @@
 body {
 	background-image:url('images/back-1.jpg');
-	width: 100%;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 

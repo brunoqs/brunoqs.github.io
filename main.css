@@ -6,12 +6,24 @@ body {
 }
 
 #menu {
-	width: 100%;
-	padding: 20px 20px 20px 20px;
+	margin-top:  10px;
+	position: fixed;
+}
+
+li {
+	padding: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#imenu {
+	color: white;
+	font-size: 100%;
 }
 
 #aboutme{
-	padding: 20px;
+	margin-top: 10px;
+	padding: 40px;
 	background-color: white;
 }
 
@@ -31,6 +43,7 @@ body {
     font-size: 20px;
     width: 50px;
     text-align: center;
+    text-decoration: none;
 }
 
 .fa-facebook {
@@ -51,4 +64,5 @@ body {
 #resume{
 	margin-top: 10px;
 	background-color: white;
+	height: 100vh;
 }

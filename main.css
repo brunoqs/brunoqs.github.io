@@ -5,6 +5,7 @@ body {
 	background-repeat: no-repeat;
 }
 
+/* Menu de navegação*/
 #menu {
 	margin-top:  10px;
 	position: fixed;
@@ -21,21 +22,66 @@ li {
 	font-size: 100%;
 }
 
+/* About me config*/
 #aboutme{
 	margin-top: 10px;
 	padding: 40px;
 	background-color: white;
 }
 
-#email{
+#photo{
+	width: 180px;
+	height: 180px;
 }
 
-#facebook{
-
+#myname{
+	text-align: center; 
+	font-family: courier;
 }
 
-#github{
+/* responsive aboutme */
+@media screen and (max-width: 1550px){
+	#myname{
+		font-size: 25px;
+	}
+	#photo{
+		width: 160px;
+		height: 160px;
+	}
+}
 
+@media screen and (max-width: 1380px){
+	#photo{
+		margin-left: -20px;
+	}
+}
+
+@media screen and (max-width: 1200px){
+	#photo{
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 20px; 
+	}
+	#menu{
+		visibility: hidden;
+	}
+}
+
+@media screen and (max-width: 575px){
+	#facebook{
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 5px;
+	}
+	#github{
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 5px;
+	}
+	#linkedin{
+		display: block;
+		margin: 0 auto;
+	}
 }
 
 .fa {
@@ -62,6 +108,12 @@ li {
 }
 
 #resume{
+	margin-top: 10px;
+	background-color: white;
+	height: 100vh;
+}
+
+#portfolio{
 	margin-top: 10px;
 	background-color: white;
 	height: 100vh;

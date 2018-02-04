@@ -84,6 +84,7 @@ li {
 	}
 }
 
+/* social network buttons*/
 .fa {
     padding: 10px;
     font-size: 20px;
@@ -110,11 +111,58 @@ li {
 #resume{
 	margin-top: 10px;
 	background-color: white;
-	height: 100vh;
+}
+
+h3{
+	margin-top: 20px;
+	margin-left: 20px;
+	font-family: courier;
+	text-align: center;
+}
+.work li span{
+	float: right;
+}
+.work li {
+    border-bottom: 1px solid #f1f1f1;
+    margin-bottom: 2em;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.label {
+  display: inline;
+  padding: .25em .6em;
+  font-size: 75%;
+  font-weight: 500;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+.label-info {
+  background-color: #5bc0de;
+}
+.no-list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.progress{
+	width: 100%;
+	height: 25px;
+	margin-bottom: 10px;
+}
+
+.progress-bar{
+	text-align: left;
+	font-weight: bold;
 }
 
 #portfolio{
 	margin-top: 10px;
 	background-color: white;
-	height: 100vh;
 }

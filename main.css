@@ -93,6 +93,10 @@ li {
     text-decoration: none;
 }
 
+.fa:hover{
+	color: white;
+}
+
 .fa-facebook {
     background: #3B5998;
     color: white;
@@ -176,3 +180,17 @@ li {
 	background-color: white;
 }
 
+.back-to-top {
+	position: fixed;
+	bottom: 2em;
+    right: 2em;
+    text-decoration: none;
+    color: white;
+   	background-color:rgb(51, 173, 255);
+    font-size: 12px;
+    padding: 1em;
+}
+
+.back-to-top:hover{
+	color: white;
+}

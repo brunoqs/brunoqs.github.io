@@ -5,6 +5,12 @@ body {
 	background-repeat: no-repeat;
 }
 
+/* Certificado */
+#certificate {
+	margin-top:  10px;
+	position: fixed;	
+}
+
 /* Menu de navegação*/
 #menu {
 	margin-top:  10px;

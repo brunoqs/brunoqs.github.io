@@ -17,10 +17,12 @@ body {
 	position: fixed;
 }
 
-li {
+.limain {
 	padding: 15px;
 	margin-top: 5px;
 	margin-bottom: 5px;
+	display: list-item;
+    text-align: -webkit-match-parent;
 }
 
 #imenu {
@@ -133,18 +135,13 @@ h1{
 	margin-bottom: 20px;
 }
 
-.work li span{
+.work .limain span{
 	float: right;
 }
 
-.work li {
+.work .limain {
     border-bottom: 1px solid #9ba9ad;
     margin-bottom: 2em;
-}
-
-li {
-    display: list-item;
-    text-align: -webkit-match-parent;
 }
 
 .label {

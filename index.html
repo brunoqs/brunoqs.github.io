@@ -12,6 +12,10 @@
 		<!-- Social Media Icons -->
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> 
 		
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
 		<!-- Custom CSS -->
 		<link rel="stylesheet" href="main.css">
 
@@ -24,7 +28,7 @@
 
 	  	<div class="row">
 	  		<!-- Menu de opções -->
-	  		<div class="col-md-3" style="background-color: rgba(0,0,0,0.6);">
+	  		<div class="col-md-3 col-side" style="background-color: rgba(0,0,0,0.6);">
   				<div class="container" id="menu">
 	  				<ul class="nav flex-column nav-pills navbar-toggleable-xl">
 
@@ -47,7 +51,7 @@
 	  		</div>
 
 	  		<!-- Info Page -->
-	  		<div class="col-xl-6" style="background-color: rgba(0,0,0,0.6);">
+	  		<div class="col-xl-6 col-main" style="background-color: rgba(0,0,0,0.6);">
 		  		<div class="container rounded" id="aboutme">
 		  			<!-- Photo and description -->
 		  			<div class="row">
@@ -68,7 +72,7 @@
 	  				<div class="row" style="margin-top: 80px;">
 	  					<div class="col-sm-6">
 	  							<h6>E-mail:</h6>
-	  							<a id="email" href="mailto:brunoqueiroz020@gmail.com" class="h6" style="color: black;"><b>brunoqueiroz020@gmail.com</b></a>
+	  							<a id="email-link" href="mailto:brunoqueiroz020@gmail.com" class="h6"><b>brunoqueiroz020@gmail.com</b></a>
 	  					</div>
 	  					<div class="offset-sm-1 col-sm-2">
 	  						<a id="github" target="_blank" href="https://github.com/brunoqs" class="fa fa-github rounded"></a>
@@ -263,7 +267,7 @@
 		  			</div>
 		  			<div class="row" style="margin-bottom: 40px;">
 		  				<div class="col-md-6 mb-3">
-							<div class="card h-100" style="background-color: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: inherit;">
+							<div class="card h-100 portfolio-card">
 								<div class="card-body">
 									<h5 class="card-title"><b>MMORPG Game Server</b></h5>
 									<h6 class="card-subtitle mb-2" style="color: rgb(51,173,255);">Side Project · C++ & Lua</h6>
@@ -279,7 +283,7 @@
 							</div>
 						</div>
 		  				<div class="col-md-6 mb-3">
-							<div class="card h-100" style="background-color: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: inherit;">
+							<div class="card h-100 portfolio-card">
 								<div class="card-body">
 									<h5 class="card-title"><b>Redação Inteligente</b></h5>
 									<h6 class="card-subtitle mb-2" style="color: rgb(51,173,255);">Emakers Jr · 2018</h6>
@@ -297,7 +301,7 @@
 					</div>
 					<div class="row" style="margin-bottom: 40px;">
 						<div class="col-md-6 mb-3">
-							<div class="card h-100" style="background-color: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: inherit;">
+							<div class="card h-100 portfolio-card">
 								<div class="card-body">
 									<h5 class="card-title"><b>Git/GitHub Mini-course</b></h5>
 									<h6 class="card-subtitle mb-2" style="color: rgb(51,173,255);">Emakers Jr · UFLA · 2018</h6>
@@ -314,9 +318,8 @@
 	  		</div>
 
 	  		<!-- Right side -->
-	  		<div class="col-md-3" style="background-color: rgba(0,0,0,0.6);">
+	  		<div class="col-md-3 col-side" style="background-color: rgba(0,0,0,0.6);">
   				<img id="certificate" src="https://ipv6.he.net/certification/create_badge.php?pass_name=brunoqs&amp;badge=3" style="border: 0; width: 229px; height: 137px" alt="IPv6 Certification Badge for brunoqs">
-			  	<a href="#" class="back-to-top rounded"><b>Top</b></a>
 	  		</div>
 	  	</div>
 
@@ -327,8 +330,39 @@
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-	    <!--Back to top-->
+		<!-- Floating controls: theme toggle + back to top -->
+	<div id="floating-controls">
+		<button id="theme-toggle" title="Alternar dark/light mode">
+			<i class="fa fa-moon-o"></i>
+		</button>
+		<a href="#" class="back-to-top rounded"><b>↑</b></a>
+	</div>
+
+    <!--Back to top-->
 		<script src="main.js"></script>
+
+		<!-- Dark/Light mode toggle -->
+		<script>
+			const toggle = document.getElementById('theme-toggle');
+			const savedTheme = localStorage.getItem('theme') || 'light';
+
+			document.body.setAttribute('data-theme', savedTheme);
+			updateIcon(savedTheme);
+
+			toggle.addEventListener('click', () => {
+				const current = document.body.getAttribute('data-theme');
+				const next = current === 'dark' ? 'light' : 'dark';
+				document.body.setAttribute('data-theme', next);
+				localStorage.setItem('theme', next);
+				updateIcon(next);
+			});
+
+			function updateIcon(theme) {
+				toggle.innerHTML = theme === 'dark'
+					? '<i class="fa fa-sun-o"></i>'
+					: '<i class="fa fa-moon-o"></i>';
+			}
+		</script>
 		
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-2WR9G1YK71"></script>
